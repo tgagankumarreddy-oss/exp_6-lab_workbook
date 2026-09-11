@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>
+            Student Result Management System
+        </title>
+        <style>
+            .label {
+                display: inline-block;
+                width: 150px;
+                text-align: right;
+                justify-content: center;
+                
+            }
+            .input {
+                width: 200px;
+                padding: 5px;
+                margin-bottom: 10px;
+                background-color: aliceblue;
+            }
+            body{
+                background-color: #f2f2f2;
+                font-family: Arial, sans-serif;
+                justify-content: center;
+                text-align: center;
+            }
+            form{
+                justify-content: center;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <center>
+            Student Result Management and validation form 👨‍🎓 📈🌐
+            </center>
+        </h1>
+        <center>
+        <form>
+            <label for="name">
+                Name:
+            </label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="rollno">
+                Roll Number:
+                </label>
+            <input type="text" id="rollno" name="rollno">
+            <br>
+            <br>
+            <label for="subject">
+                Subject:
+            </label>
+            <input type="text" id="subject" name="subject">
+            <br>
+            <br>
+            <label for="marks">
+                Marks For Subject 1:
+            </label>
+            <input type="text" id="marks" name="marks">
+            <br>
+            <br>
+            <label for="marks2">
+                Marks For Subject 2:
+            </label>
+            <input type="text" id="marks2" name="marks2">
+            <button>
+                reset
+            </button>
+            
+
+
+        </form>
+
+        </center>
+
+        <script>
+            function calculate(){
+                let mark1=document.getElementById("marks").value;
+                let mark2=document.getElementById("marks2").value;
+                var total_marks=parseInt(mark1)+parseInt(mark2)
+                document.getElementById("total").innerHTML="total marks obtained by student : "+total_marks;
+                
+
+            }
+            function percentage(){
+                let mark1=document.getElementById("marks").value;
+                let mark2=document.getElementById("marks2").value;
+                var percentage=((parseInt(mark1)+parseInt(mark2))/200)*100;
+                document.getElementById("percentage").innerHTML="percentage of marks obtained :"+percentage+"% 🥳🥳💐";
+
+            }
+            function evaluate(){
+                let mark1=document.getElementById("marks").value;
+                let mark2=document.getElementById("marks2").value;
+                var per=((parseInt(mark1)+parseInt(mark2))/200)*100;
+                
+                if(per>50){
+                    document.getElementById("evaluation").innerHTML="passed🙏👨‍🎓"
+                }
+                else{
+                    document.getElementById("evaluation").innerHTML="failed 😒 "
+                }
+
+            }
+        </script>
+        <button onclick="calculate()"> 
+            total marks
+        </button>
+        <p id="total"></p>
+        <button onclick="percentage()">
+            percentage of marks obtaines
+        </button>
+        <p id="percentage">
+
+        </p>
+        <button onclick="evaluate()">
+            evaluation based on percentage
+        </button>
+        <p id="evaluation">
+
+        </p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+design an result entry form using html
+style using css
+validate user inputs using javascript
+calculate total marks , percentage and grade and result status
+disply student result in table
+options to clear form and enter other student details
